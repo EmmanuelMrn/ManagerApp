@@ -1,13 +1,12 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { Provider } from 'react-redux';
+import firebase from 'firebase';
 import { createStore, applyMiddleware } from 'redux';
-import { Text, View } from 'react-native';
 import ReduxThunk from 'redux-thunk';
 import reducers from './src/reducers';
-import firebase from 'firebase';
 import LoginForm from './src/components/LoginForm';
 
-class App extends Component{
+class App extends Component {
   componentWillMount() {
     // Initialize Firebase
     const config = {
